@@ -1,0 +1,37 @@
+{
+  "name": "c8-sdk-demo",
+  "version": "1.0.0",
+  "description": "Camunda 8 SDK demo project",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "NODE_OPTIONS='--loader ts-node/esm' node src/index.ts",
+    "build": "tsc",
+    "test": "NODE_OPTIONS='--loader ts-node/esm' mocha --require ts-node/register 'src/tests/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts'",
+    "prettify": "prettier --write 'src/**/*.ts'"
+  },
+  "keywords": [
+    "camunda",
+    "zeebe",
+    "sdk",
+    "workflow",
+    "orchestration"
+  ],
+  "author": "donat.mehmeti@camunda.com",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@camunda8/sdk": "^8.6.15",
+    "chalk": "^5.3.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.9",
+    "chai": "^5.1.2",
+    "mocha": "^10.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
