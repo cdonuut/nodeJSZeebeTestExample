@@ -13,11 +13,11 @@ function delay(ms: number) {
 async function fetchActiveJobs() {
     try {
         const jobs = await zbc.activateJobs({
-            type: 'service-task', // Replace with your BPMN task type
+            type: 'service-task', 
             maxJobsToActivate: 5,
-            requestTimeout: 6000, // Optional: request timeout for fetching jobs
+            requestTimeout: 6000, // Optional: you can request timeout for fetching jobs
             timeout: 5 * 60 * 1000, // Job timeout duration
-            worker: 'my-worker-uuid', // Worker name or unique identifier
+            worker: 'my-worker-uuid', // Worker name (any name)
         });
 
         // Extract job keys from the fetched jobs and log each
